@@ -1,0 +1,7 @@
+global-include *.rst *.ini
+include MANIFEST.in
+recursive-include kotti_mapreduce *.py
+recursive-include kotti_mapreduce/locale *.mo *.po *.pot
+recursive-include kotti_mapreduce/static *.css *.js *.png *.gif
+recursive-include kotti_mapreduce/templates *.pt
+recursive-include kotti_mapreduce/tests *.txt

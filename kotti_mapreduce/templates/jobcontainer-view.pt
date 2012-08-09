@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="kotti_mapreduce"
+      metal:use-macro="api.macro('kotti:templates/view/master.pt')">
+
+  <head tal:omit-tag="" metal:fill-slot="head-more">
+    <link rel="stylesheet" href="${request.static_url('kotti_mapreduce:static/style.css')}" type="text/css" />
+    <more tal:omit-tag="" metal:define-slot="head"></more>
+  </head>
+
+  <article metal:fill-slot="content" class="jobcontainer-view content">
+    <h1>${api.context.title}</h1>
+    <p class="description">
+      ${api.context.description}
+    </p>
+
+    <h3 i18n:translate="">Resource</h3>
+      <ol tal:condition="jobresources">
+        <li tal:repeat="row jobresources">
+          <a href="${api.url(row)}">${row.title}</a>: ${row.description}
+        </li>
+      </ol>
+    <hr>
+
+    <h3 i18n:translate="">Job Service</h3>
+      <ol tal:condition="jobservices">
+        <li tal:repeat="row jobservices">
+          <a href="${api.url(row)}">${row.title}</a>: ${row.description}
+        </li>
+      </ol>
+    <hr>
+
+    <h3 i18n:translate="">Bootstrap</h3>
+      <ol tal:condition="bootstraps">
+        <li tal:repeat="row bootstraps">
+          <a href="${api.url(row)}">${row.title}</a>: ${row.description}
+        </li>
+      </ol>
+    <hr>
+
+  </article>
+</html>

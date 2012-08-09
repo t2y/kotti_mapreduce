@@ -1,0 +1,108 @@
+kotti_mapreduce browser tests
+=============================
+
+Setup and Login
+---------------
+
+  >>> import pytest
+  >>> from kotti import testing
+  >>> tools = testing.setUpFunctional(
+  ... **{'kotti.configurators': 'kotti_mapreduce.kotti_configure',
+  ...   })
+  >>> browser = tools['Browser']()
+  >>> ctrl = browser.getControl
+
+  >>> browser.open(testing.BASE_URL + '/edit')
+  >>> "Log in" in browser.contents
+  True
+  >>> ctrl("Username or email").value = "admin"
+  >>> ctrl("Password").value = "secret"
+  >>> ctrl(name="submit").click()
+  >>> "Welcome, Administrator" in browser.contents
+  True
+
+Add a Job Container
+-------------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("Job Container").click()
+  >>> ctrl("Title").value = "new job container"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/'
+  True
+  >>> browser.getLink("Edit").click()
+  >>> "new job container" in browser.contents
+  True
+
+View Job Container
+------------------
+
+  >>> browser.open(testing.BASE_URL + '/new-job-container/')
+  >>> "Resource" in browser.contents
+  True
+  >>> "Job Service" in browser.contents
+  True
+  >>> "Bootstrap" in browser.contents
+  True
+
+Add a EMR Resource
+------------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("EMR Job Resource").click()
+  >>> ctrl("Title").value = "new emr resource"
+  >>> ctrl("AWS access key ID").value = "access-key"
+  >>> ctrl("AWS secret access key").value = "secret"
+  >>> ctrl("log URI").value = "s3n://my-bucket/logs/"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-emr-resource/'
+  True
+  >>> browser.getLink("Edit").click()
+  >>> "new emr resource" in browser.contents
+  True
+  >>> browser.getLink("new job container").click()
+  >>> "new job container" in browser.contents
+  True
+
+Add a Job Service
+-----------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("Job Service").click()
+  >>> ctrl("Title").value = "new job service"
+  >>> ctrl("Resource").displayValue[0] == "new emr resource"
+  True
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/'
+  True
+  >>> browser.getLink("Edit").click()
+  >>> "new job service" in browser.contents
+  True
+  >>> browser.getLink("new job container").click()
+  >>> "new job container" in browser.contents
+  True
+
+Add a Bootstrap
+---------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("Bootstrap").click()
+  >>> ctrl("Title").value = "new bootstrap"
+  >>> ctrl("Path URI").value = "s3n://bootstrap/process"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-bootstrap/'
+  True
+  >>> browser.getLink("Edit").click()
+  >>> "new bootstrap" in browser.contents
+  True
+  >>> browser.getLink("new job container").click()
+  >>> "new job container" in browser.contents
+  True

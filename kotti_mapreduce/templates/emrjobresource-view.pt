@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="kotti_mapreduce"
+      metal:use-macro="api.macro('kotti:templates/view/master.pt')">
+
+  <head tal:omit-tag="" metal:fill-slot="head-more">
+    <link rel="stylesheet" href="${request.static_url('kotti_mapreduce:static/style.css')}" type="text/css" />
+    <more tal:omit-tag="" metal:define-slot="head"></more>
+  </head>
+
+  <article metal:fill-slot="content" class="emrjobresource-view content">
+    <h1>${api.context.title}</h1>
+    <p class="description">
+      ${api.context.description}
+    </p>
+
+    <table id="emr_resource" class="table table-striped table-condensed">
+      <thead>
+        <tr>
+          <th i18n:translate="">Configuration</th>
+          <th i18n:translate="">Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td i18n:translate="">AWS access key ID</td>
+          <td>${api.context.aws_access_key_id}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">AWS secret access key</td>
+          <td>${api.context.aws_secret_access_key}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">AWS region</td>
+          <td>${api.context.region}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Master instance type</td>
+          <td>${api.context.master_instance_type}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Slave instance type</td>
+          <td>${api.context.slave_instance_type}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">EC2 key pair name</td>
+          <td>${api.context.ec2_keyname}</tr>
+        <tr>
+          <td i18n:translate="">EC2 key pair private key file</td>
+          <td>********</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Number of instances</td>
+          <td>${api.context.num_instances}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Action on failure</td>
+          <td>${api.context.action_on_failure}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Keep alive</td>
+          <td>${api.context.keep_alive}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Enable debugging</td>
+          <td>${api.context.enable_debugging}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Termination protection</td>
+          <td>${api.context.termination_protection}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">S3 Log URI</td>
+          <td>${api.context.log_uri}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">AMI version</td>
+          <td>${api.context.ami_version}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Hadoop version</td>
+          <td>${api.context.hadoop_version}</td>
+        </tr>
+        <tr>
+          <td i18n:translate="">Hive version</td>
+          <td>${api.context.hive_version}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt')"></movelink>
+
+  </article>
+</html>

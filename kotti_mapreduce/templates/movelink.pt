@@ -1,0 +1,18 @@
+<hr>
+<div i18n:domain="kotti_mapreduce">
+  <dl>
+    <dt i18n:translate="">Move to parent or children contents.</dt>
+    <dd tal:condition="api.context.parent" style="padding: 5px 0;">
+      <a class="btn btn-small" href="${api.url(api.context.parent)}">
+        <i class="icon-arrow-up"></i>
+        ${api.context.parent.title}
+      </a>
+    </dd>
+    <dd tal:condition="api.context.children">
+      <a tal:repeat="row api.context.children" class="btn btn-small" href="${api.url(row)}">
+        <i class="icon-arrow-down"></i>
+        ${row.title}
+      </a>
+    </dd>
+  </dl>
+</div>

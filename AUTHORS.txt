@@ -1,0 +1,7 @@
+Authors
+=======
+
+- Tetsuya Morimoto
+
+For a complete list of contributors, see
+https://github.com/t2y/kotti_mapreduce/graphs/contributors

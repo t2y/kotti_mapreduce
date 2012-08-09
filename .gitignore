@@ -6,6 +6,7 @@ junit*.xml
 *.pyc
 *.pt.py
 .installed.cfg
+.cache
 *~
 *.swp
 *.py[co]
