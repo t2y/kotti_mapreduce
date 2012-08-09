@@ -14,6 +14,7 @@ the Job Flow for MapReduce.
 
 Development happens at https://github.com/t2y/kotti_mapreduce
 
+.. _Find out more about Kotti: http://pypi.python.org/pypi/Kotti
 .. _Amazon Elastic MapReduce (Amazon EMR): http://aws.amazon.com/elasticmapreduce/
 .. _Amazon Elastic MapReduce (Documentation): http://aws.amazon.com/documentation/elasticmapreduce/
 
