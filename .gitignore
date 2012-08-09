@@ -1,3 +1,13 @@
+# kotti
+Kotti.db*
+docs/_build/
+docs/_themes/
+junit*.xml
+*.pyc
+*.pt.py
+.installed.cfg
+*~
+*.swp
 *.py[co]
 
 # Packages
