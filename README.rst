@@ -33,8 +33,8 @@ From github (for developers)::
     $ python setup.py develop
 
 
-Setup
-=====
+Configuration
+=============
 
 To enable the extension in your Kotti site, activate the configurator:
 
