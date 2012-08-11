@@ -36,6 +36,12 @@ From github (for developers)::
 Configuration
 =============
 
-To enable the extension in your Kotti site, activate the configurator:
+To enable the extension in your Kotti site, activate the configurator::
 
-  kotti.configurators = kotti_mapreduce.kotti_configure
+    kotti.configurators = kotti_mapreduce.kotti_configure
+
+
+Documentation
+=============
+
+Documentation is hosted on readthedocs.org at http://kotti-mapreduce.readthedocs.org/en/latest/
