@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  kotti_mapreduce\n"
 "Report-Msgid-Bugs-To: tetsuya.morimoto@gmail.com\n"
-"POT-Creation-Date: 2012-08-09 18:01+0900\n"
+"POT-Creation-Date: 2012-08-11 15:54+0900\n"
 "PO-Revision-Date: 2012-08-03 17:33+0900\n"
 "Last-Translator: Tetsuya Morimoto <tetsuya.morimoto@gmail.com>\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -508,3 +508,4 @@ msgstr "サイズ (バイト)"
 #: kotti_mapreduce/templates/movelink.pt:4
 msgid "Move to parent or children contents."
 msgstr "親または子のコンテンツへ移動"
+

@@ -73,7 +73,7 @@
           <td>${api.context.termination_protection}</td>
         </tr>
         <tr>
-          <td i18n:translate="">S3 Log URI</td>
+          <td i18n:translate="">Log URI</td>
           <td>${api.context.log_uri}</td>
         </tr>
         <tr>
