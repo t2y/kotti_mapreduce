@@ -437,6 +437,7 @@ def view_jobflow(context, request):
 
 
 _SUPPORT_ACTION_TYPE = [
+    ('', u''),
     ('hadoop', u'Configure Hadoop'),
     ('daemon', u'Configure Daemons'),
     ('ganglia', u'Install Ganglia'),
