@@ -34,7 +34,7 @@
           <td i18n:translate="">AWS secret access key
           </td>
           <td>
-            <button id="show_aws_secret_btn" class="btn btn-info btn-mini" i18n:translate="">show</button>
+            <button id="show_aws_secret_btn" class="btn btn-info btn-mini" i18n:translate="">Show</button>
             <span id="turned_letter_aws_secret">********</span>
             <span id="actual_letter_aws_secret" class="toggle-display">${api.context.aws_secret_access_key}</span>
           </td>
@@ -53,11 +53,12 @@
         </tr>
         <tr>
           <td i18n:translate="">EC2 key pair name</td>
-          <td>${api.context.ec2_keyname}</tr>
+          <td>${api.context.ec2_keyname}</td>
+        </tr>
         <tr>
           <td i18n:translate="">EC2 key pair private key file</td>
           <td>
-            <button id="show_ec2_keyfile_btn" class="btn btn-info btn-mini" i18n:translate="">show</button>
+            <button id="show_ec2_keyfile_btn" class="btn btn-info btn-mini" i18n:translate="">Show</button>
             <span id="turned_letter_ec2_keyfile">********</span>
             <span id="actual_letter_ec2_keyfile" class="toggle-display">${api.context.ec2_keyfile}</span>
           </td>
@@ -100,6 +101,12 @@
         </tr>
       </tbody>
     </table>
+
+    <!-- i18n translation for emrjobresource-view.js -->
+    <div id="btn_name_text" style="display: none;">
+      <span id="btn_name_show" i18n:translate="">Show</span>
+      <span id="btn_name_hide" i18n:translate="">Hide</span>
+    </div>
 
     <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt')"></movelink>
 

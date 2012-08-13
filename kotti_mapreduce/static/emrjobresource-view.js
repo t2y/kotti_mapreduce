@@ -15,9 +15,11 @@ $(function() {
 
 function toggle_show_or_hide(btn) {
     var btn_name = btn.text();
-    if (btn_name == 'show') {
-        btn.text('hide');
+    var btn_name_show = $('#btn_name_show').text();
+    var btn_name_hide = $('#btn_name_hide').text();
+    if (btn_name == btn_name_show) {
+        btn.text(btn_name_hide);
     } else {
-        btn.text('show');
+        btn.text(btn_name_show);
     }
 }

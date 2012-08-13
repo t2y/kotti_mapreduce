@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_mapreduce 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-08-11 15:54+0900\n"
+"POT-Creation-Date: 2012-08-13 18:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,345 +44,361 @@ msgstr ""
 msgid "Bootstrap"
 msgstr ""
 
-#: kotti_mapreduce/views.py:50
+#: kotti_mapreduce/views.py:51
 msgid "Not supported vendor: ${vendor}"
 msgstr ""
 
-#: kotti_mapreduce/views.py:56
+#: kotti_mapreduce/views.py:57
 msgid "Cloud vendor"
 msgstr ""
 
-#: kotti_mapreduce/views.py:57
+#: kotti_mapreduce/views.py:58
 msgid "Cloud vendor name."
 msgstr ""
 
-#: kotti_mapreduce/views.py:95 kotti_mapreduce/templates/emrjobresource-view.pt:29
+#: kotti_mapreduce/views.py:96 kotti_mapreduce/templates/emrjobresource-view.pt:30
 msgid "AWS access key ID"
 msgstr ""
 
-#: kotti_mapreduce/views.py:96
+#: kotti_mapreduce/views.py:97
 msgid "AWS access key ID to use AWS API."
 msgstr ""
 
-#: kotti_mapreduce/views.py:100 kotti_mapreduce/templates/emrjobresource-view.pt:33
+#: kotti_mapreduce/views.py:101 kotti_mapreduce/templates/emrjobresource-view.pt:34
 msgid "AWS secret access key"
 msgstr ""
 
-#: kotti_mapreduce/views.py:101
+#: kotti_mapreduce/views.py:102
 msgid "AWS secret access key to use AWS API."
 msgstr ""
 
-#: kotti_mapreduce/views.py:105 kotti_mapreduce/templates/emrjobresource-view.pt:37
+#: kotti_mapreduce/views.py:107 kotti_mapreduce/templates/emrjobresource-view.pt:43
 msgid "AWS region"
 msgstr ""
 
-#: kotti_mapreduce/views.py:106
+#: kotti_mapreduce/views.py:108
 msgid "AWS region code where a MapReduce job is executed."
 msgstr ""
 
-#: kotti_mapreduce/views.py:110 kotti_mapreduce/templates/emrjobresource-view.pt:41
+#: kotti_mapreduce/views.py:112 kotti_mapreduce/templates/emrjobresource-view.pt:47
 msgid "Master instance type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:111
+#: kotti_mapreduce/views.py:113
 msgid "EC2 instance type of the master node."
 msgstr ""
 
-#: kotti_mapreduce/views.py:116 kotti_mapreduce/templates/emrjobresource-view.pt:45
+#: kotti_mapreduce/views.py:118 kotti_mapreduce/templates/emrjobresource-view.pt:51
 msgid "Slave instance type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:117
+#: kotti_mapreduce/views.py:119
 msgid "EC2 instance type of the slave nodes."
 msgstr ""
 
-#: kotti_mapreduce/views.py:122 kotti_mapreduce/templates/emrjobresource-view.pt:49
+#: kotti_mapreduce/views.py:124 kotti_mapreduce/templates/emrjobresource-view.pt:55
 msgid "EC2 key pair name"
 msgstr ""
 
-#: kotti_mapreduce/views.py:123
+#: kotti_mapreduce/views.py:125
 msgid "EC2 key pair filename."
 msgstr ""
 
-#: kotti_mapreduce/views.py:128
+#: kotti_mapreduce/views.py:130 kotti_mapreduce/templates/emrjobresource-view.pt:59
 msgid "EC2 key pair private key file"
 msgstr ""
 
-#: kotti_mapreduce/views.py:129
+#: kotti_mapreduce/views.py:131
 msgid "EC2 key pair private key contents."
 msgstr ""
 
-#: kotti_mapreduce/views.py:135
+#: kotti_mapreduce/views.py:137 kotti_mapreduce/templates/emrjobresource-view.pt:67
 msgid "Number of instances"
 msgstr ""
 
-#: kotti_mapreduce/views.py:136
+#: kotti_mapreduce/views.py:138
 msgid "Number of instances in the Hadoop cluster."
 msgstr ""
 
-#: kotti_mapreduce/views.py:141
+#: kotti_mapreduce/views.py:143 kotti_mapreduce/templates/emrjobresource-view.pt:71
 msgid "Action on failure"
 msgstr ""
 
-#: kotti_mapreduce/views.py:142
+#: kotti_mapreduce/views.py:144
 msgid "Action to take if a step terminates."
 msgstr ""
 
-#: kotti_mapreduce/views.py:148 kotti_mapreduce/templates/jobflow-view.pt:30
+#: kotti_mapreduce/views.py:150 kotti_mapreduce/templates/emrjobresource-view.pt:75
+#: kotti_mapreduce/templates/jobflow-view.pt:30
 msgid "Keep alive"
 msgstr ""
 
-#: kotti_mapreduce/views.py:149
+#: kotti_mapreduce/views.py:151
 msgid "Denotes whether the cluster should stay alive upon completion."
 msgstr ""
 
-#: kotti_mapreduce/views.py:155
+#: kotti_mapreduce/views.py:157 kotti_mapreduce/templates/emrjobresource-view.pt:79
 msgid "Enable debugging"
 msgstr ""
 
-#: kotti_mapreduce/views.py:156
+#: kotti_mapreduce/views.py:158
 msgid "Denotes whether AWS console debugging should be enabled."
 msgstr ""
 
-#: kotti_mapreduce/views.py:162
+#: kotti_mapreduce/views.py:164 kotti_mapreduce/templates/emrjobresource-view.pt:83
 msgid "Termination protection"
 msgstr ""
 
-#: kotti_mapreduce/views.py:163
+#: kotti_mapreduce/views.py:165
 msgid "Set termination protection on jobflows."
 msgstr ""
 
-#: kotti_mapreduce/views.py:167
+#: kotti_mapreduce/views.py:169
 msgid "log URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:168
+#: kotti_mapreduce/views.py:170
 msgid "URI of the S3 bucket to place logs."
 msgstr ""
 
-#: kotti_mapreduce/views.py:172
+#: kotti_mapreduce/views.py:174 kotti_mapreduce/templates/emrjobresource-view.pt:91
 msgid "AMI version"
 msgstr ""
 
-#: kotti_mapreduce/views.py:173
+#: kotti_mapreduce/views.py:175
 msgid "Amazon Machine Image (AMI) version to use for instances."
 msgstr ""
 
-#: kotti_mapreduce/views.py:179
+#: kotti_mapreduce/views.py:181 kotti_mapreduce/templates/emrjobresource-view.pt:95
 msgid "Hadoop version"
 msgstr ""
 
-#: kotti_mapreduce/views.py:180
+#: kotti_mapreduce/views.py:182
 msgid "Version of Hadoop to use. This no longer."
 msgstr ""
 
-#: kotti_mapreduce/views.py:185
+#: kotti_mapreduce/views.py:187 kotti_mapreduce/templates/emrjobresource-view.pt:99
 msgid "Hive version"
 msgstr ""
 
-#: kotti_mapreduce/views.py:186
+#: kotti_mapreduce/views.py:188
 msgid "Version of Hive to use."
 msgstr ""
 
-#: kotti_mapreduce/views.py:218 kotti_mapreduce/templates/jobcontainer-view.pt:20
+#: kotti_mapreduce/views.py:220 kotti_mapreduce/templates/jobcontainer-view.pt:20
 msgid "Resource"
 msgstr ""
 
-#: kotti_mapreduce/views.py:219
+#: kotti_mapreduce/views.py:221
 msgid "Resource name."
 msgstr ""
 
-#: kotti_mapreduce/views.py:261 kotti_mapreduce/views.py:560
+#: kotti_mapreduce/views.py:263 kotti_mapreduce/views.py:567
 msgid "Job flow ID"
 msgstr ""
 
-#: kotti_mapreduce/views.py:262
+#: kotti_mapreduce/views.py:264
 msgid "specify only if you have existing job flow."
 msgstr ""
 
-#: kotti_mapreduce/views.py:267
+#: kotti_mapreduce/views.py:269
 msgid "Job type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:268
+#: kotti_mapreduce/views.py:270
 msgid "Application type for job flow."
 msgstr ""
 
-#: kotti_mapreduce/views.py:272
+#: kotti_mapreduce/views.py:274
 msgid "Job flow state"
 msgstr ""
 
-#: kotti_mapreduce/views.py:273
+#: kotti_mapreduce/views.py:275
 msgid "Job flow state."
 msgstr ""
 
-#: kotti_mapreduce/views.py:279
+#: kotti_mapreduce/views.py:281
 msgid "Hive site"
 msgstr ""
 
-#: kotti_mapreduce/views.py:280
+#: kotti_mapreduce/views.py:282
 msgid "Use metastore located outside of the cluster."
 msgstr ""
 
-#: kotti_mapreduce/views.py:286
+#: kotti_mapreduce/views.py:288
 msgid "Bootstrap #1"
 msgstr ""
 
-#: kotti_mapreduce/views.py:293
+#: kotti_mapreduce/views.py:295
 msgid "Bootstrap #2"
 msgstr ""
 
-#: kotti_mapreduce/views.py:300
+#: kotti_mapreduce/views.py:302
 msgid "Bootstrap #3"
 msgstr ""
 
-#: kotti_mapreduce/views.py:307
+#: kotti_mapreduce/views.py:309
 msgid "Bootstrap #4"
 msgstr ""
 
-#: kotti_mapreduce/views.py:314
+#: kotti_mapreduce/views.py:316
 msgid "Bootstrap #5"
 msgstr ""
 
-#: kotti_mapreduce/views.py:321
+#: kotti_mapreduce/views.py:323
 msgid "Bootstrap #6"
 msgstr ""
 
-#: kotti_mapreduce/views.py:328
+#: kotti_mapreduce/views.py:330
 msgid "Bootstrap #7"
 msgstr ""
 
-#: kotti_mapreduce/views.py:335
+#: kotti_mapreduce/views.py:337
 msgid "Bootstrap #8"
 msgstr ""
 
-#: kotti_mapreduce/views.py:342
+#: kotti_mapreduce/views.py:344
 msgid "Bootstrap #9"
 msgstr ""
 
-#: kotti_mapreduce/views.py:349
+#: kotti_mapreduce/views.py:351
 msgid "Bootstrap #10"
 msgstr ""
 
-#: kotti_mapreduce/views.py:356
+#: kotti_mapreduce/views.py:358
 msgid "Bootstrap #11"
 msgstr ""
 
-#: kotti_mapreduce/views.py:363
+#: kotti_mapreduce/views.py:365
 msgid "Bootstrap #12"
 msgstr ""
 
-#: kotti_mapreduce/views.py:370
+#: kotti_mapreduce/views.py:372
 msgid "Bootstrap #13"
 msgstr ""
 
-#: kotti_mapreduce/views.py:377
+#: kotti_mapreduce/views.py:379
 msgid "Bootstrap #14"
 msgstr ""
 
-#: kotti_mapreduce/views.py:384
+#: kotti_mapreduce/views.py:386
 msgid "Bootstrap #15"
 msgstr ""
 
-#: kotti_mapreduce/views.py:391
+#: kotti_mapreduce/views.py:393
 msgid "Bootstrap #16"
 msgstr ""
 
-#: kotti_mapreduce/views.py:456
+#: kotti_mapreduce/views.py:459
 msgid "Action Type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:457
+#: kotti_mapreduce/views.py:460
 msgid "The action type."
 msgstr ""
 
-#: kotti_mapreduce/views.py:462 kotti_mapreduce/templates/bootstrap-view.pt:33
+#: kotti_mapreduce/views.py:465 kotti_mapreduce/templates/bootstrap-view.pt:33
 #: kotti_mapreduce/templates/jobflow-view.pt:58
 msgid "Path URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:463
+#: kotti_mapreduce/views.py:466
 msgid "The Path URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:468 kotti_mapreduce/templates/bootstrap-view.pt:37
+#: kotti_mapreduce/views.py:471 kotti_mapreduce/templates/bootstrap-view.pt:37
 msgid "Optional arguments"
 msgstr ""
 
-#: kotti_mapreduce/views.py:469
+#: kotti_mapreduce/views.py:472
 msgid "Arguments to pass to the bootstrap."
 msgstr ""
 
-#: kotti_mapreduce/views.py:554
+#: kotti_mapreduce/views.py:561
 msgid "Got Error: ${err}"
 msgstr ""
 
-#: kotti_mapreduce/views.py:561
+#: kotti_mapreduce/views.py:568
 msgid "a step belongs to the job flow ID."
 msgstr ""
 
-#: kotti_mapreduce/views.py:568
+#: kotti_mapreduce/views.py:575
 msgid "Custom Jar URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:569
+#: kotti_mapreduce/views.py:576
 msgid "The custom Jar URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:575
+#: kotti_mapreduce/views.py:582
 msgid "Mapper"
 msgstr ""
 
-#: kotti_mapreduce/views.py:576
+#: kotti_mapreduce/views.py:583
 msgid "The mapper URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:582
+#: kotti_mapreduce/views.py:589
 msgid "Reducer"
 msgstr ""
 
-#: kotti_mapreduce/views.py:583
+#: kotti_mapreduce/views.py:590
 msgid "The reducer URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:589
+#: kotti_mapreduce/views.py:596
 msgid "Input file URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:590
+#: kotti_mapreduce/views.py:597
 msgid "The Input file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:596
+#: kotti_mapreduce/views.py:603
 msgid "Output file URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:597
+#: kotti_mapreduce/views.py:604
 msgid "The Output file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:603
+#: kotti_mapreduce/views.py:610
 msgid "Step arguments"
 msgstr ""
 
-#: kotti_mapreduce/views.py:604
+#: kotti_mapreduce/views.py:611
 msgid "Arguments to pass to the step."
 msgstr ""
 
 #: kotti_mapreduce/templates/bootstrap-view.pt:23
-#: kotti_mapreduce/templates/emrjobresource-view.pt:23
+#: kotti_mapreduce/templates/emrjobresource-view.pt:24
 #: kotti_mapreduce/templates/jobstep-view.pt:23
 msgid "Configuration"
 msgstr ""
 
 #: kotti_mapreduce/templates/bootstrap-view.pt:24
-#: kotti_mapreduce/templates/emrjobresource-view.pt:24
+#: kotti_mapreduce/templates/emrjobresource-view.pt:25
 #: kotti_mapreduce/templates/jobstep-view.pt:24
 msgid "Value"
 msgstr ""
 
 #: kotti_mapreduce/templates/bootstrap-view.pt:29
 msgid "Action type"
+msgstr ""
+
+#: kotti_mapreduce/templates/emrjobresource-view.pt:37
+#: kotti_mapreduce/templates/emrjobresource-view.pt:61
+#: kotti_mapreduce/templates/emrjobresource-view.pt:107
+msgid "Show"
+msgstr ""
+
+#: kotti_mapreduce/templates/emrjobresource-view.pt:87
+#: kotti_mapreduce/templates/jobflow-view.pt:36
+msgid "Log URI"
+msgstr ""
+
+#: kotti_mapreduce/templates/emrjobresource-view.pt:108
+msgid "Hide"
 msgstr ""
 
 #: kotti_mapreduce/templates/jobflow-view.pt:22
@@ -419,10 +435,6 @@ msgstr ""
 
 #: kotti_mapreduce/templates/jobflow-view.pt:35
 msgid "Slave instance"
-msgstr ""
-
-#: kotti_mapreduce/templates/jobflow-view.pt:36
-msgid "Log URI"
 msgstr ""
 
 #: kotti_mapreduce/templates/jobflow-view.pt:57
