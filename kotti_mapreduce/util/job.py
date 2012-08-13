@@ -113,7 +113,8 @@ def is_runnable_jobflow(context):
         return state in (u'', u'STARTING', u'WAITING', u'RUNNING')
 
     is_runnable = False
-    if context.children and is_runnable_state(context.state):
+    target_steps = list(ifilterfalse(attrgetter('step_run'), context.children))
+    if target_steps and is_runnable_state(context.state):
         is_runnable = True
     return is_runnable
 
