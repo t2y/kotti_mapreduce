@@ -180,7 +180,7 @@ class EMRJobResourceSchema(ContentSchema):
         description=_(u'Version of Hadoop to use. This no longer.'),
         missing=u'',
     )
-    hive_version = colander.SchemaNode(
+    hive_versions = colander.SchemaNode(
         colander.String(),
         title=_(u'Hive version'),
         description=_(u'Version of Hive to use.'),
@@ -528,7 +528,11 @@ def deferred_jobstep_widget(node, kw):
 def deferred_default_step_args(node, kw):
     jobtype = get_context_data(kw['request'].context, 'jobflow', ['jobtype'])
     if jobtype == u'hive':
-        return _DEFAULT_HIVE_STEP_ARGS
+        resource = get_resource(kw['request'].context)
+        args = _DEFAULT_HIVE_STEP_ARGS
+        if resource.hive_versions:
+            args += u'--hive-versions\n{0}\n'.format(resource.hive_versions)
+        return args
     elif jobtype == u'custom-jar':
         return _DEFAULT_CUSTOM_JAR_STEP_ARGS
     else:

@@ -86,7 +86,7 @@
         </tr>
         <tr>
           <td i18n:translate="">Hive version</td>
-          <td>${api.context.hive_version}</td>
+          <td>${api.context.hive_versions}</td>
         </tr>
       </tbody>
     </table>

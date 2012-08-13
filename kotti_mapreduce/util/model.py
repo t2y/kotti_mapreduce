@@ -34,11 +34,14 @@ def get_resource_model(context):
     return resource
 
 def get_resource(context):
+    def get_resource_id(context):
+        if hasattr(context, "resource_id"):
+            return context.resource_id
+        else:
+            return get_resource_id(context.parent)
+
     model = get_resource_model(context)
-    if hasattr(context, "resource_id"):
-        resource_id = context.resource_id
-    else:
-        resource_id = context.parent.resource_id
+    resource_id = get_resource_id(context)
     query_filter = methodcaller("filter", model.id == resource_id)
     return get_data(model, query_filter)
 

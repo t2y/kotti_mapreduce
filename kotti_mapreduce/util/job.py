@@ -139,7 +139,10 @@ def make_hive_jobsteps(now, resource, steps, hive_site, need_preprocessing):
             self.step_name = step_name
             self.step_args = step_args
 
-    def insert_setup_hive_step(steps):
+    def insert_setup_hive_step(steps, resource):
+        version = u''
+        if resource.hive_versions:
+            version = u'--hive-versions\n{0}'.format(resource.hive_versions)
         setup_hive_step = ExtraStep(
             '{0} Setup Hive from kotti_mapreduce {1}',
             """
@@ -147,7 +150,8 @@ def make_hive_jobsteps(now, resource, steps, hive_site, need_preprocessing):
             --base-path
             s3://us-east-1.elasticmapreduce/libs/hive/
             --install-hive
-            """
+            {0}
+            """.format(version)
         )
         steps.insert(0, setup_hive_step)
 
@@ -169,7 +173,7 @@ def make_hive_jobsteps(now, resource, steps, hive_site, need_preprocessing):
     if need_preprocessing:
         if hive_site:
             insert_install_hive_site(steps, hive_site)
-        insert_setup_hive_step(steps)
+        insert_setup_hive_step(steps, resource)
 
     job_steps = []
     for i, step in enumerate(steps):
@@ -256,7 +260,6 @@ _JOBFLOW_PARAMS = [
     'num_instances',
     'ami_version',
     'hadoop_version',
-    'hive_version',
 ]
 
 def run_jobflow(emr_conn, resource, context):

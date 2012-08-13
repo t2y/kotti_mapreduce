@@ -47,7 +47,7 @@ class EMRJobResource(Content):
     log_uri = Column(String(1024))
     ami_version = Column(String(32))
     hadoop_version = Column(String(32))
-    hive_version = Column(String(32))
+    hive_versions = Column(String(32))
 
     type_info = Content.type_info.copy(
         name=u'EMRJobResource',
@@ -63,7 +63,7 @@ class EMRJobResource(Content):
                  action_on_failure=u'TERMINATE_JOB_FLOW', keep_alive=False,
                  enable_debugging=False, termination_protection=False,
                  log_uri=None, ami_version=None, hadoop_version=None,
-                 hive_version=None, **kwargs):
+                 hive_versions=None, **kwargs):
         super(EMRJobResource, self).__init__(**kwargs)
         self.aws_access_key_id = aws_access_key_id
         self.aws_secret_access_key = aws_secret_access_key
@@ -80,7 +80,7 @@ class EMRJobResource(Content):
         self.log_uri = log_uri
         self.ami_version = ami_version
         self.hadoop_version = hadoop_version
-        self.hive_version = hive_version
+        self.hive_versions = hive_versions
 
 
 class JobService(Content):
