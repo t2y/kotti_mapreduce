@@ -14,3 +14,7 @@
 .toggle-display {
     display: none;
 }
+
+.fixed-width-column {
+    width: 35%;
+}

@@ -7,6 +7,7 @@ from operator import methodcaller
 import colander
 import validictory
 from deform.widget import HiddenWidget
+from deform.widget import PasswordWidget
 from deform.widget import TextAreaWidget
 from deform.widget import TextInputWidget
 from deform.widget import SelectWidget
@@ -99,6 +100,7 @@ class EMRJobResourceSchema(ContentSchema):
         colander.String(),
         title=_(u'AWS secret access key'),
         description=_(u'AWS secret access key to use AWS API.'),
+        widget=PasswordWidget(),
     )
     region = colander.SchemaNode(
         colander.String(),
