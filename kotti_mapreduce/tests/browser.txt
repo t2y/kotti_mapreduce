@@ -94,6 +94,7 @@ Add a Bootstrap
   >>> browser.getLink("Add").click()
   >>> browser.getLink("Bootstrap").click()
   >>> ctrl("Title").value = "new bootstrap"
+  >>> ctrl("Action Type").value = ["custom",]
   >>> ctrl("Path URI").value = "s3n://bootstrap/process"
   >>> ctrl("save").click()
   >>> "Successfully added item" in browser.contents
