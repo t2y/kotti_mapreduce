@@ -89,6 +89,17 @@ _SUPPORT_ACTION_ON_FAILURE = [
     u'TERMINATE_JOB_FLOW',
 ]
 
+_SUPPORT_INSTANCE_TYPE = [
+    (u'm1.small', u'Small (m1.small)'),
+    (u'c1.medium', u'High-CPU Medium (c1.medium)'),
+    (u'm1.large', u'Large (m1.large)'),
+    (u'm1.xlarge', u'Extra Large (m1.xlarge)'),
+    (u'c1.xlarge', u'High-CPU Extra Large (c1.xlarge)'),
+    (u'm2.xlarge', u'High-Memory Extra Large (m2.xlarge)'),
+    (u'm2.2xlarge', u'High-Memory Double Extra Large (m2.2xlarge)'),
+    (u'm2.4xlarge', u'High-Memory Quad Extra Large (m2.4xlarge)'),
+]
+
 
 class EMRJobResourceSchema(ContentSchema):
     aws_access_key_id = colander.SchemaNode(
@@ -111,12 +122,14 @@ class EMRJobResourceSchema(ContentSchema):
         colander.String(),
         title=_(u'Master instance type'),
         description=_(u'EC2 instance type of the master node.'),
+        widget=SelectWidget(values=_SUPPORT_INSTANCE_TYPE),
         default='m1.small',
     )
     slave_instance_type = colander.SchemaNode(
         colander.String(),
         title=_(u'Slave instance type'),
         description=_(u'EC2 instance type of the slave nodes.'),
+        widget=SelectWidget(values=_SUPPORT_INSTANCE_TYPE),
         default='m1.small',
     )
     ec2_keyname = colander.SchemaNode(
@@ -459,6 +472,7 @@ class BootstrapSchema(ContentSchema):
         title=_(u'Action Type'),
         description=_(u'The action type.'),
         widget=SelectWidget(values=_SUPPORT_ACTION_TYPE),
+        default=u'',
     )
     path_uri = colander.SchemaNode(
         colander.String(),
