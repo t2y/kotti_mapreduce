@@ -414,7 +414,8 @@ def edit_jobflow(context, request):
     return generic_edit(context, request, JobFlowSchema())
 
 def add_jobflow(context, request):
-    return generic_add(context, request, JobFlowSchema(), JobFlow, u'jobflow')
+    return generic_add(context, request, JobFlowSchema(),
+                       JobFlow, JobFlow.type_info.title)
 
 def view_jobflow_with_ajax(context, request):
     req_type = request.params.get('type')
