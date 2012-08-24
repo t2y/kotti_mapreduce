@@ -45,9 +45,14 @@ def get_resource(context):
     query_filter = methodcaller("filter", model.id == resource_id)
     return get_data(model, query_filter)
 
+def get_context_or_parent(context, context_type):
+    if context.type == context_type:
+        return context
+    else:
+        return get_context_or_parent(context.parent, context_type)
 
 def get_context_data(context, context_type, keys):
-    if context.type != context_type:
-        return get_context_data(context.parent, context_type, keys)
-    else:
+    if context.type == context_type:
         return attrgetter(*keys)(context)
+    else:
+        return get_context_data(context.parent, context_type, keys)

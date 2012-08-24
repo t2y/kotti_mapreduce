@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from kotti.resources import Content
+from kotti.sqla import JsonType
+from kotti.sqla import MutationList
 from sqlalchemy import Boolean
 from sqlalchemy import Column
 from sqlalchemy import ForeignKey
@@ -110,23 +112,7 @@ class JobFlow(Content):
     jobtype = Column(String(32))
     state = Column(String(64))
     hive_site = Column(String(1024))
-    # FIXME: implement one to many relation
-    bootstrap1_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap2_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap3_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap4_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap5_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap6_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap7_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap8_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap9_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap10_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap11_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap12_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap13_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap14_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap15_id = Column(Integer(), ForeignKey('bootstraps.id'))
-    bootstrap16_id = Column(Integer(), ForeignKey('bootstraps.id'))
+    bootstrap_titles = Column(MutationList.as_mutable(JsonType))
 
     type_info = Content.type_info.copy(
         name=u'JobFlow',
@@ -136,33 +122,13 @@ class JobFlow(Content):
     )
 
     def __init__(self, jobflow_id=u'', jobtype=u'', state=u'', hive_site=u'',
-                 bootstrap1_id=u'', bootstrap2_id=u'', bootstrap3_id=u'',
-                 bootstrap4_id=u'', bootstrap5_id=u'', bootstrap6_id=u'',
-                 bootstrap7_id=u'', bootstrap8_id=u'', bootstrap9_id=u'',
-                 bootstrap10_id=u'', bootstrap11_id=u'', bootstrap12_id=u'',
-                 bootstrap13_id=u'', bootstrap14_id=u'', bootstrap15_id=u'',
-                 bootstrap16_id=u'', **kwargs):
+                 bootstrap_titles=[], **kwargs):
         super(JobFlow, self).__init__(**kwargs)
         self.jobflow_id = jobflow_id
         self.jobtype = jobtype
         self.state = state
         self.hive_site = hive_site
-        self.bootstrap1_id = bootstrap1_id
-        self.bootstrap2_id = bootstrap2_id
-        self.bootstrap3_id = bootstrap3_id
-        self.bootstrap4_id = bootstrap4_id
-        self.bootstrap5_id = bootstrap5_id
-        self.bootstrap6_id = bootstrap6_id
-        self.bootstrap7_id = bootstrap7_id
-        self.bootstrap8_id = bootstrap8_id
-        self.bootstrap9_id = bootstrap9_id
-        self.bootstrap10_id = bootstrap10_id
-        self.bootstrap11_id = bootstrap11_id
-        self.bootstrap12_id = bootstrap12_id
-        self.bootstrap13_id = bootstrap13_id
-        self.bootstrap14_id = bootstrap14_id
-        self.bootstrap15_id = bootstrap15_id
-        self.bootstrap16_id = bootstrap16_id
+        self.bootstrap_titles = bootstrap_titles
 
 
 class JobStep(Content):

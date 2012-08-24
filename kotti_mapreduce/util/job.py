@@ -222,30 +222,10 @@ def make_jobsteps(now, resource, context, target_steps):
     else:
         return None
 
-_BOOTSTRAP_ID_ATTRS = [
-    'bootstrap1_id',
-    'bootstrap2_id',
-    'bootstrap3_id',
-    'bootstrap4_id',
-    'bootstrap5_id',
-    'bootstrap6_id',
-    'bootstrap7_id',
-    'bootstrap8_id',
-    'bootstrap9_id',
-    'bootstrap10_id',
-    'bootstrap11_id',
-    'bootstrap12_id',
-    'bootstrap13_id',
-    'bootstrap14_id',
-    'bootstrap15_id',
-    'bootstrap16_id',
-]
-
 def get_bootstraps(jobflow):
     model = Bootstrap
-    bootstrap_ids = attrgetter(*_BOOTSTRAP_ID_ATTRS)(jobflow)
-    return [get_data(model, methodcaller("filter", model.id == id_))
-                        for id_ in bootstrap_ids if isinstance(id_, int)]
+    return [get_data(model, methodcaller("filter", model.title == title))
+                        for title in jobflow.bootstrap_titles]
 
 def get_bootstrap_actions(jobflow):
     return [BootstrapAction(bs.action_type, bs.path_uri,
