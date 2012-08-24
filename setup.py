@@ -11,7 +11,7 @@ except IOError:
     README = AUTHORS = CHANGES = ''
 
 install_requires = [
-    'Kotti >= 0.7a4',
+    'Kotti >= 0.7',
     'Babel',
     'boto',
     'python-dateutil',
