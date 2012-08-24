@@ -320,7 +320,7 @@ class JobFlowSchema(ContentSchema):
     bootstrap_titles = colander.SchemaNode(
         ObjectType(),
         title=_('Bootstraps'),
-        description=_(u'Input a bootstrap name in advance.'),
+        description=_(u'Input a bootstrap name registered in advance.'),
         validator=deferred_bootstrap_validator,
         widget=deferred_bootstrap_widget,
         missing=[],
