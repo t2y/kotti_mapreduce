@@ -30,6 +30,15 @@ def convert_local_datetime(jobflows, attr_names=_CONVERT_DATETIME_ATTRS,
             setattr(job, name, local_datetime)
 
 def get_local_datetime(dt_str, tz_name):
+    """
+    >>> local_dt = get_local_datetime(u'2012-07-19T05:04:28Z', 'Asia/Tokyo')
+    >>> local_dt.tzname()
+    'JST'
+    >>> local_dt.hour
+    14
+    >>> get_local_datetime('', 'Asia/Tokyo')
+    u''
+    """
     local_dt = u''
     if dt_str:
         dt = date_parser(dt_str)
