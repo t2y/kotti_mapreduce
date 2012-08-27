@@ -32,8 +32,20 @@ Add a Job Container
   True
   >>> browser.url == testing.BASE_URL + '/new-job-container/'
   True
+
+Edit a Job Container
+--------------------
+
   >>> browser.getLink("Edit").click()
   >>> "new job container" in browser.contents
+  True
+  >>> ctrl("Cloud vendor").value = ""
+  >>> ctrl("save").click()
+  >>> "There was a problem" in browser.contents
+  True
+  >>> ctrl("Cloud vendor").value = "aws"
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
   True
 
 View Job Container
@@ -61,49 +73,167 @@ Add a EMR Resource
   True
   >>> browser.url == testing.BASE_URL + '/new-job-container/new-emr-resource/'
   True
+
+Edit a EMR Resource
+-------------------
+
   >>> browser.getLink("Edit").click()
   >>> "new emr resource" in browser.contents
   True
-  >>> browser.getLink("new job container").click()
-  >>> "new job container" in browser.contents
+  >>> ctrl("EC2 key pair name").value = "ec2-key-pair"
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
   True
 
-Add a Job Service
------------------
+Add an another EMR Resource
+---------------------------
 
-  >>> browser.getLink("Add").click()
-  >>> browser.getLink("Job Service").click()
-  >>> ctrl("Title").value = "new job service"
-  >>> ctrl("Resource").displayValue[0] == "new emr resource"
-  True
+  >>> browser.getLink("EMR Job Resource").click()
+  >>> ctrl("Title").value = "new emr resource2"
+  >>> ctrl("AWS access key ID").value = "access-key"
+  >>> ctrl("AWS secret access key").value = "secret"
+  >>> ctrl("log URI").value = "s3n://my-bucket/logs/"
   >>> ctrl("save").click()
   >>> "Successfully added item" in browser.contents
   True
-  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/'
-  True
-  >>> browser.getLink("Edit").click()
-  >>> "new job service" in browser.contents
-  True
-  >>> browser.getLink("new job container").click()
-  >>> "new job container" in browser.contents
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-emr-resource2/'
   True
 
 Add a Bootstrap
 ---------------
 
-  >>> browser.getLink("Add").click()
   >>> browser.getLink("Bootstrap").click()
   >>> ctrl("Title").value = "new bootstrap"
-  >>> ctrl("Action Type").value = ["custom",]
+  >>> len(ctrl("Action Type").displayOptions) == 7
+  True
+  >>> ctrl("Action Type").value = ["custom"]
   >>> ctrl("Path URI").value = "s3n://bootstrap/process"
   >>> ctrl("save").click()
   >>> "Successfully added item" in browser.contents
   True
   >>> browser.url == testing.BASE_URL + '/new-job-container/new-bootstrap/'
   True
+
+Add an another Bootstrap
+------------------------
+
+  >>> browser.getLink("Bootstrap").click()
+  >>> ctrl("Title").value = "new bootstrap2"
+  >>> ctrl("Action Type").value = ["ganglia"]
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-bootstrap2/'
+  True
+
+Edit a Bootstrap
+----------------
+
   >>> browser.getLink("Edit").click()
+  >>> "new bootstrap2" in browser.contents
+  True
+  >>> ctrl("Action Type").value = ["memory"]
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
+  True
+
+Add a Job Service
+-----------------
+
+  >>> browser.getLink("Job Service").click()
+  >>> ctrl("Title").value = "new job service"
+  >>> ctrl("Resource").displayValue[0] == "new emr resource"
+  True
+  >>> len(ctrl("Resource").displayOptions) == 2
+  True
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/'
+  True
+
+Edit a Job Service
+------------------
+
+  >>> browser.getLink("Edit").click()
+  >>> "new job service" in browser.contents
+  True
+  >>> ctrl("Resource").displayOptions[1] == "new emr resource2"
+  True
+  >>> ctrl("Resource").value = ctrl("Resource").options[1:]
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
+  True
+
+Add a Job Flow
+--------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("Job Flow").click()
+  >>> ctrl("Title").value = "new job flow"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/new-job-flow/'
+  True
+
+Edit a Job Flow
+---------------
+
+  >>> browser.getLink("Edit").click()
+  >>> "new job flow" in browser.contents
+  True
+  >>> ctrl("Bootstraps").value = "new bootstrap,new bootstrap2"
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
+  True
+
+Add a Job Step
+--------------
+
+  >>> browser.getLink("Add").click()
+  >>> browser.getLink("Job Step").click()
+  >>> ctrl("Title").value = "step1"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/new-job-flow/step1/'
+  True
+
+Add an another Job Step
+-----------------------
+
+  >>> browser.getLink("Job Step").click()
+  >>> ctrl("Title").value = "step2"
+  >>> ctrl("save").click()
+  >>> "Successfully added item" in browser.contents
+  True
+  >>> browser.url == testing.BASE_URL + '/new-job-container/new-job-service/new-job-flow/step2/'
+  True
+
+Edit a Job Step
+---------------
+
+  >>> browser.getLink("Edit").click()
+  >>> "step2" in browser.contents
+  True
+  >>> ctrl("Step arguments").value = "some arguments"
+  >>> ctrl("save").click()
+  >>> "Your changes have been saved" in browser.contents
+  True
+
+Validate a Job Flow prepared to run
+-----------------------------------
+
+  >>> browser.getLink("new job flow").click()
+  >>> # FIXME: how to validate table data
+  >>> "new emr resource2" in browser.contents
+  True
   >>> "new bootstrap" in browser.contents
   True
-  >>> browser.getLink("new job container").click()
-  >>> "new job container" in browser.contents
+  >>> "new bootstrap2" in browser.contents
+  True
+  >>> "step1" in browser.contents
+  True
+  >>> "step2" in browser.contents
   True
