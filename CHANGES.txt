@@ -1,2 +1,14 @@
-History
-=======
+ChangeLog
+=========
+
+0.2.0 (2012-08-28)
+------------------
+
+* fix bugs
+* refactoring user-interface
+* change the bootstrap model definition to be flexible structure
+
+0.1.0 (2012-08-11)
+------------------
+
+* first release

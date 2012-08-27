@@ -32,7 +32,7 @@ tests_require = [
 ]
 
 setup(name='kotti_mapreduce',
-      version='0.1.0',
+      version='0.2.0',
       description='The MapReduce addon for Kotti sites',
       long_description='\n\n'.join([README, AUTHORS, CHANGES]),
       classifiers=[
