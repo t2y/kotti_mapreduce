@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_mapreduce 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-08-24 17:03+0900\n"
+"POT-Creation-Date: 2012-08-27 13:15+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -129,7 +129,7 @@ msgid "Action to take if a step terminates."
 msgstr ""
 
 #: kotti_mapreduce/views.py:166 kotti_mapreduce/templates/emrjobresource-view.pt:75
-#: kotti_mapreduce/templates/jobflow-view.pt:30
+#: kotti_mapreduce/templates/jobflow-view.pt:31
 msgid "Keep alive"
 msgstr ""
 
@@ -246,7 +246,7 @@ msgid "The action type."
 msgstr ""
 
 #: kotti_mapreduce/views.py:392 kotti_mapreduce/templates/bootstrap-view.pt:33
-#: kotti_mapreduce/templates/jobflow-view.pt:58
+#: kotti_mapreduce/templates/jobflow-view.pt:59
 msgid "Path URI"
 msgstr ""
 
@@ -270,7 +270,7 @@ msgstr ""
 msgid "a step belongs to the job flow ID."
 msgstr ""
 
-#: kotti_mapreduce/views.py:507
+#: kotti_mapreduce/views.py:507 kotti_mapreduce/templates/jobflow-view.pt:87
 msgid "Custom Jar URI"
 msgstr ""
 
@@ -278,7 +278,7 @@ msgstr ""
 msgid "The custom Jar URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:514
+#: kotti_mapreduce/views.py:514 kotti_mapreduce/templates/jobflow-view.pt:80
 msgid "Mapper"
 msgstr ""
 
@@ -286,7 +286,7 @@ msgstr ""
 msgid "The mapper URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:521
+#: kotti_mapreduce/views.py:521 kotti_mapreduce/templates/jobflow-view.pt:81
 msgid "Reducer"
 msgstr ""
 
@@ -294,7 +294,7 @@ msgstr ""
 msgid "The reducer URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:528
+#: kotti_mapreduce/views.py:528 kotti_mapreduce/templates/jobflow-view.pt:82
 msgid "Input file URI"
 msgstr ""
 
@@ -302,7 +302,7 @@ msgstr ""
 msgid "The Input file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:535
+#: kotti_mapreduce/views.py:535 kotti_mapreduce/templates/jobflow-view.pt:83
 msgid "Output file URI"
 msgstr ""
 
@@ -310,7 +310,7 @@ msgstr ""
 msgid "The Output file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:542
+#: kotti_mapreduce/views.py:542 kotti_mapreduce/templates/jobflow-view.pt:88
 msgid "Step arguments"
 msgstr ""
 
@@ -341,7 +341,7 @@ msgid "Show"
 msgstr ""
 
 #: kotti_mapreduce/templates/emrjobresource-view.pt:87
-#: kotti_mapreduce/templates/jobflow-view.pt:36
+#: kotti_mapreduce/templates/jobflow-view.pt:37
 msgid "Log URI"
 msgstr ""
 
@@ -357,105 +357,116 @@ msgstr ""
 msgid "Bootstrap Info"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:28
-msgid "Title"
+#: kotti_mapreduce/templates/jobflow-view.pt:24
+msgid "Unexecuted Step Info"
 msgstr ""
 
 #: kotti_mapreduce/templates/jobflow-view.pt:29
+msgid "Title"
+msgstr ""
+
+#: kotti_mapreduce/templates/jobflow-view.pt:30
 msgid "Region"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:31
+#: kotti_mapreduce/templates/jobflow-view.pt:32
 msgid "Access key"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:32
+#: kotti_mapreduce/templates/jobflow-view.pt:33
 msgid "Key pair name"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:33
+#: kotti_mapreduce/templates/jobflow-view.pt:34
 msgid "Instance number"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:34
+#: kotti_mapreduce/templates/jobflow-view.pt:35
 msgid "Master instance"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:35
+#: kotti_mapreduce/templates/jobflow-view.pt:36
 msgid "Slave instance"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:57
-#: kotti_mapreduce/templates/jobflow-view.pt:98
-#: kotti_mapreduce/templates/jobflow-view.pt:104
+#: kotti_mapreduce/templates/jobflow-view.pt:58
+#: kotti_mapreduce/templates/jobflow-view.pt:75
+#: kotti_mapreduce/templates/jobflow-view.pt:79
+#: kotti_mapreduce/templates/jobflow-view.pt:86
+#: kotti_mapreduce/templates/jobflow-view.pt:138
+#: kotti_mapreduce/templates/jobflow-view.pt:144
 msgid "Name"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:59
+#: kotti_mapreduce/templates/jobflow-view.pt:60
 msgid "Optional args"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:73
+#: kotti_mapreduce/templates/jobflow-view.pt:76
+msgid "Step args"
+msgstr ""
+
+#: kotti_mapreduce/templates/jobflow-view.pt:113
 msgid "Run Jobflow"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:74
+#: kotti_mapreduce/templates/jobflow-view.pt:114
 msgid "Refresh"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:75
+#: kotti_mapreduce/templates/jobflow-view.pt:115
 msgid "Terminate"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:81
+#: kotti_mapreduce/templates/jobflow-view.pt:121
 msgid "JobFlow ID"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:82
-#: kotti_mapreduce/templates/jobflow-view.pt:105
+#: kotti_mapreduce/templates/jobflow-view.pt:122
+#: kotti_mapreduce/templates/jobflow-view.pt:145
 msgid "State"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:83
+#: kotti_mapreduce/templates/jobflow-view.pt:123
 msgid "Keep Alive"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:84
+#: kotti_mapreduce/templates/jobflow-view.pt:124
 msgid "Creation Date"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:85
-#: kotti_mapreduce/templates/jobflow-view.pt:108
+#: kotti_mapreduce/templates/jobflow-view.pt:125
+#: kotti_mapreduce/templates/jobflow-view.pt:148
 msgid "Start Date"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:86
-#: kotti_mapreduce/templates/jobflow-view.pt:109
+#: kotti_mapreduce/templates/jobflow-view.pt:126
+#: kotti_mapreduce/templates/jobflow-view.pt:149
 msgid "End Date"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:99
+#: kotti_mapreduce/templates/jobflow-view.pt:139
 msgid "Path"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:100
-#: kotti_mapreduce/templates/jobflow-view.pt:107
+#: kotti_mapreduce/templates/jobflow-view.pt:140
+#: kotti_mapreduce/templates/jobflow-view.pt:147
 msgid "Args"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:106
+#: kotti_mapreduce/templates/jobflow-view.pt:146
 msgid "Jar"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:112
+#: kotti_mapreduce/templates/jobflow-view.pt:152
 msgid "Get Log"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:117
+#: kotti_mapreduce/templates/jobflow-view.pt:157
 msgid "Log File"
 msgstr ""
 
-#: kotti_mapreduce/templates/jobflow-view.pt:118
+#: kotti_mapreduce/templates/jobflow-view.pt:158
 msgid "Size (Bytes)"
 msgstr ""
 

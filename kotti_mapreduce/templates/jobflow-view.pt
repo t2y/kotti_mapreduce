@@ -79,13 +79,13 @@
           <th i18n:translate="">Name</th>
           <th i18n:translate="">Mapper</th>
           <th i18n:translate="">Reducer</th>
-          <th i18n:translate="">Input URI</th>
-          <th i18n:translate="">Output URI</th>
+          <th i18n:translate="">Input file URI</th>
+          <th i18n:translate="">Output file URI</th>
         </tr>
         <tr tal:case="'custom-jar'">
           <th i18n:translate="">Name</th>
-          <th i18n:translate="">Jar URI</th>
-          <th i18n:translate="">Step args</th>
+          <th i18n:translate="">Custom Jar URI</th>
+          <th i18n:translate="">Step arguments</th>
         </tr>
       </thead>
       <tbody tal:repeat="row context.children" tal:switch="context.jobtype">
