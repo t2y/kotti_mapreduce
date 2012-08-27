@@ -19,7 +19,7 @@ First of all, create a Job Container.
 
 You can see an Edit page for Job Container. Then, input for a title
 what you like and click `save` button. Sorry, `Cloud vendor` is
-only accepted `aws`.
+only accepted `aws` in current version.
 
 .. figure:: _static/k2.png
     :alt: Create Job Container
@@ -164,7 +164,8 @@ This step is a `Word Count Example`_.
 
     Create Job Step
 
-Back to upper job flow after you created a job step.
+Select `Job Step` link to add another job step. Or, back to upper job flow
+after you created a job step.
 
 .. figure:: _static/k14.png
     :alt: Created Job Step
@@ -172,7 +173,10 @@ Back to upper job flow after you created a job step.
 
     Created Job Step
 
-You can see a `Run Jobflow` button. It means all settings are completed.
+You can confirm information about job flow by clicking `Resource Info`,
+`Bootstrap Info` and `Unexecuted Step Info` button.
+
+Now, `Run Jobflow` button is appeared. It means all settings are completed.
 
 .. figure:: _static/k15.png
     :alt: Run Job Flow
