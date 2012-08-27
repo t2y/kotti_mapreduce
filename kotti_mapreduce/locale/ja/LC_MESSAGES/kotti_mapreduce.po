@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  kotti_mapreduce\n"
 "Report-Msgid-Bugs-To: tetsuya.morimoto@gmail.com\n"
-"POT-Creation-Date: 2012-08-27 13:15+0900\n"
+"POT-Creation-Date: 2012-08-27 15:21+0900\n"
 "PO-Revision-Date: 2012-08-03 17:33+0900\n"
 "Last-Translator: Tetsuya Morimoto <tetsuya.morimoto@gmail.com>\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -199,137 +199,137 @@ msgstr "Hive バージョン"
 msgid "Version of Hive to use."
 msgstr "Hive のバージョンです。"
 
-#: kotti_mapreduce/views.py:237
+#: kotti_mapreduce/views.py:238
 #: kotti_mapreduce/templates/jobcontainer-view.pt:20
 msgid "Resource"
 msgstr "リソース"
 
-#: kotti_mapreduce/views.py:238
+#: kotti_mapreduce/views.py:239
 msgid "Resource name."
 msgstr "リソース名です。"
 
-#: kotti_mapreduce/views.py:263
+#: kotti_mapreduce/views.py:265
 msgid "The Bootstrap is not found."
 msgstr "ブートストラップが見つかりません。"
 
-#: kotti_mapreduce/views.py:298 kotti_mapreduce/views.py:499
+#: kotti_mapreduce/views.py:300 kotti_mapreduce/views.py:503
 msgid "Job flow ID"
 msgstr "ジョブフロー ID"
 
-#: kotti_mapreduce/views.py:299
+#: kotti_mapreduce/views.py:301
 msgid "specify only if you have existing job flow."
 msgstr "既存の ジョブフローが存在するときだけ指定してください。"
 
-#: kotti_mapreduce/views.py:304
+#: kotti_mapreduce/views.py:306
 msgid "Job type"
 msgstr "ジョブタイプ"
 
-#: kotti_mapreduce/views.py:305
+#: kotti_mapreduce/views.py:307
 msgid "Application type for job flow."
 msgstr "ジョブフローのアプリケーションタイプ"
 
-#: kotti_mapreduce/views.py:309
+#: kotti_mapreduce/views.py:311
 msgid "Job flow state"
 msgstr "ジョブフローの状態"
 
-#: kotti_mapreduce/views.py:310
+#: kotti_mapreduce/views.py:312
 msgid "Job flow state."
 msgstr "ジョブフローの状態です。"
 
-#: kotti_mapreduce/views.py:316
+#: kotti_mapreduce/views.py:318
 msgid "Hive site"
 msgstr "Hive サイト"
 
-#: kotti_mapreduce/views.py:317
+#: kotti_mapreduce/views.py:319
 msgid "Use metastore located outside of the cluster."
 msgstr "クラスターの外部に置かれたメタストアを使います。"
 
-#: kotti_mapreduce/views.py:322
+#: kotti_mapreduce/views.py:324
 msgid "Bootstraps"
 msgstr "ブートストラップ"
 
-#: kotti_mapreduce/views.py:323
+#: kotti_mapreduce/views.py:325
 msgid "Input a bootstrap name registered in advance."
 msgstr "前もって登録したブートストラップ名を入力します。"
 
-#: kotti_mapreduce/views.py:385
+#: kotti_mapreduce/views.py:388
 msgid "Action Type"
 msgstr "アクションタイプ"
 
-#: kotti_mapreduce/views.py:386
+#: kotti_mapreduce/views.py:389
 msgid "The action type."
 msgstr "アクションタイプです。"
 
-#: kotti_mapreduce/views.py:392 kotti_mapreduce/templates/bootstrap-view.pt:33
+#: kotti_mapreduce/views.py:395 kotti_mapreduce/templates/bootstrap-view.pt:33
 #: kotti_mapreduce/templates/jobflow-view.pt:59
 msgid "Path URI"
 msgstr "パス URI"
 
-#: kotti_mapreduce/views.py:393
+#: kotti_mapreduce/views.py:396
 msgid "The Path URI."
 msgstr "パス URI です。"
 
-#: kotti_mapreduce/views.py:398 kotti_mapreduce/templates/bootstrap-view.pt:37
+#: kotti_mapreduce/views.py:401 kotti_mapreduce/templates/bootstrap-view.pt:37
 msgid "Optional arguments"
 msgstr "オプション引数"
 
-#: kotti_mapreduce/views.py:399
+#: kotti_mapreduce/views.py:402
 msgid "Arguments to pass to the bootstrap."
 msgstr "ブートストラップへ渡すオプション引数です。"
 
-#: kotti_mapreduce/views.py:493
+#: kotti_mapreduce/views.py:497
 msgid "Got Error: ${err}"
 msgstr "エラーが発生しました: ${err}"
 
-#: kotti_mapreduce/views.py:500
+#: kotti_mapreduce/views.py:504
 msgid "a step belongs to the job flow ID."
 msgstr "ステップが所属するジョブフロー ID です。"
 
-#: kotti_mapreduce/views.py:507 kotti_mapreduce/templates/jobflow-view.pt:87
+#: kotti_mapreduce/views.py:511 kotti_mapreduce/templates/jobflow-view.pt:87
 msgid "Custom Jar URI"
 msgstr "カスタム Jar URI"
 
-#: kotti_mapreduce/views.py:508
+#: kotti_mapreduce/views.py:512
 msgid "The custom Jar URI."
 msgstr "カスタム Jar URI です。"
 
-#: kotti_mapreduce/views.py:514 kotti_mapreduce/templates/jobflow-view.pt:80
+#: kotti_mapreduce/views.py:518 kotti_mapreduce/templates/jobflow-view.pt:80
 msgid "Mapper"
 msgstr "Mapper"
 
-#: kotti_mapreduce/views.py:515
+#: kotti_mapreduce/views.py:519
 msgid "The mapper URI."
 msgstr "Mapper URI です。"
 
-#: kotti_mapreduce/views.py:521 kotti_mapreduce/templates/jobflow-view.pt:81
+#: kotti_mapreduce/views.py:525 kotti_mapreduce/templates/jobflow-view.pt:81
 msgid "Reducer"
 msgstr "Reducer"
 
-#: kotti_mapreduce/views.py:522
+#: kotti_mapreduce/views.py:526
 msgid "The reducer URI."
 msgstr "Reducer URI です。"
 
-#: kotti_mapreduce/views.py:528 kotti_mapreduce/templates/jobflow-view.pt:82
+#: kotti_mapreduce/views.py:532 kotti_mapreduce/templates/jobflow-view.pt:82
 msgid "Input file URI"
 msgstr "入力ファイル URI"
 
-#: kotti_mapreduce/views.py:529
+#: kotti_mapreduce/views.py:533
 msgid "The Input file URI."
 msgstr "入力ファイル URI です。"
 
-#: kotti_mapreduce/views.py:535 kotti_mapreduce/templates/jobflow-view.pt:83
+#: kotti_mapreduce/views.py:539 kotti_mapreduce/templates/jobflow-view.pt:83
 msgid "Output file URI"
 msgstr "出力ファイル URI"
 
-#: kotti_mapreduce/views.py:536
+#: kotti_mapreduce/views.py:540
 msgid "The Output file URI."
 msgstr "出力ファイル URI です。"
 
-#: kotti_mapreduce/views.py:542 kotti_mapreduce/templates/jobflow-view.pt:88
+#: kotti_mapreduce/views.py:546 kotti_mapreduce/templates/jobflow-view.pt:88
 msgid "Step arguments"
 msgstr "ステップ引数"
 
-#: kotti_mapreduce/views.py:543
+#: kotti_mapreduce/views.py:547
 msgid "Arguments to pass to the step."
 msgstr "ステップに渡される引数です。"
 
@@ -486,6 +486,9 @@ msgid "Size (Bytes)"
 msgstr "サイズ (バイト)"
 
 #: kotti_mapreduce/templates/movelink.pt:4
-msgid "Move to parent or children contents."
-msgstr "親または子のコンテンツへ移動"
+msgid "Add another content."
+msgstr "さらにコンテンツを追加します。"
 
+#: kotti_mapreduce/templates/movelink.pt:13
+msgid "Move to parent or children contents."
+msgstr "親または子のコンテンツへ移動します。"

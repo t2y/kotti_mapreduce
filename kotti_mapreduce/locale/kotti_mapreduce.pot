@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kotti_mapreduce 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-08-27 13:15+0900\n"
+"POT-Creation-Date: 2012-08-27 15:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,136 +185,136 @@ msgstr ""
 msgid "Version of Hive to use."
 msgstr ""
 
-#: kotti_mapreduce/views.py:237 kotti_mapreduce/templates/jobcontainer-view.pt:20
+#: kotti_mapreduce/views.py:238 kotti_mapreduce/templates/jobcontainer-view.pt:20
 msgid "Resource"
 msgstr ""
 
-#: kotti_mapreduce/views.py:238
+#: kotti_mapreduce/views.py:239
 msgid "Resource name."
 msgstr ""
 
-#: kotti_mapreduce/views.py:263
+#: kotti_mapreduce/views.py:265
 msgid "The Bootstrap is not found."
 msgstr ""
 
-#: kotti_mapreduce/views.py:298 kotti_mapreduce/views.py:499
+#: kotti_mapreduce/views.py:300 kotti_mapreduce/views.py:503
 msgid "Job flow ID"
 msgstr ""
 
-#: kotti_mapreduce/views.py:299
+#: kotti_mapreduce/views.py:301
 msgid "specify only if you have existing job flow."
 msgstr ""
 
-#: kotti_mapreduce/views.py:304
+#: kotti_mapreduce/views.py:306
 msgid "Job type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:305
+#: kotti_mapreduce/views.py:307
 msgid "Application type for job flow."
 msgstr ""
 
-#: kotti_mapreduce/views.py:309
+#: kotti_mapreduce/views.py:311
 msgid "Job flow state"
 msgstr ""
 
-#: kotti_mapreduce/views.py:310
+#: kotti_mapreduce/views.py:312
 msgid "Job flow state."
 msgstr ""
 
-#: kotti_mapreduce/views.py:316
+#: kotti_mapreduce/views.py:318
 msgid "Hive site"
 msgstr ""
 
-#: kotti_mapreduce/views.py:317
+#: kotti_mapreduce/views.py:319
 msgid "Use metastore located outside of the cluster."
 msgstr ""
 
-#: kotti_mapreduce/views.py:322
+#: kotti_mapreduce/views.py:324
 msgid "Bootstraps"
 msgstr ""
 
-#: kotti_mapreduce/views.py:323
+#: kotti_mapreduce/views.py:325
 msgid "Input a bootstrap name registered in advance."
 msgstr ""
 
-#: kotti_mapreduce/views.py:385
+#: kotti_mapreduce/views.py:388
 msgid "Action Type"
 msgstr ""
 
-#: kotti_mapreduce/views.py:386
+#: kotti_mapreduce/views.py:389
 msgid "The action type."
 msgstr ""
 
-#: kotti_mapreduce/views.py:392 kotti_mapreduce/templates/bootstrap-view.pt:33
+#: kotti_mapreduce/views.py:395 kotti_mapreduce/templates/bootstrap-view.pt:33
 #: kotti_mapreduce/templates/jobflow-view.pt:59
 msgid "Path URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:393
+#: kotti_mapreduce/views.py:396
 msgid "The Path URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:398 kotti_mapreduce/templates/bootstrap-view.pt:37
+#: kotti_mapreduce/views.py:401 kotti_mapreduce/templates/bootstrap-view.pt:37
 msgid "Optional arguments"
 msgstr ""
 
-#: kotti_mapreduce/views.py:399
+#: kotti_mapreduce/views.py:402
 msgid "Arguments to pass to the bootstrap."
 msgstr ""
 
-#: kotti_mapreduce/views.py:493
+#: kotti_mapreduce/views.py:497
 msgid "Got Error: ${err}"
 msgstr ""
 
-#: kotti_mapreduce/views.py:500
+#: kotti_mapreduce/views.py:504
 msgid "a step belongs to the job flow ID."
 msgstr ""
 
-#: kotti_mapreduce/views.py:507 kotti_mapreduce/templates/jobflow-view.pt:87
+#: kotti_mapreduce/views.py:511 kotti_mapreduce/templates/jobflow-view.pt:87
 msgid "Custom Jar URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:508
+#: kotti_mapreduce/views.py:512
 msgid "The custom Jar URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:514 kotti_mapreduce/templates/jobflow-view.pt:80
+#: kotti_mapreduce/views.py:518 kotti_mapreduce/templates/jobflow-view.pt:80
 msgid "Mapper"
 msgstr ""
 
-#: kotti_mapreduce/views.py:515
+#: kotti_mapreduce/views.py:519
 msgid "The mapper URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:521 kotti_mapreduce/templates/jobflow-view.pt:81
+#: kotti_mapreduce/views.py:525 kotti_mapreduce/templates/jobflow-view.pt:81
 msgid "Reducer"
 msgstr ""
 
-#: kotti_mapreduce/views.py:522
+#: kotti_mapreduce/views.py:526
 msgid "The reducer URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:528 kotti_mapreduce/templates/jobflow-view.pt:82
+#: kotti_mapreduce/views.py:532 kotti_mapreduce/templates/jobflow-view.pt:82
 msgid "Input file URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:529
+#: kotti_mapreduce/views.py:533
 msgid "The Input file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:535 kotti_mapreduce/templates/jobflow-view.pt:83
+#: kotti_mapreduce/views.py:539 kotti_mapreduce/templates/jobflow-view.pt:83
 msgid "Output file URI"
 msgstr ""
 
-#: kotti_mapreduce/views.py:536
+#: kotti_mapreduce/views.py:540
 msgid "The Output file URI."
 msgstr ""
 
-#: kotti_mapreduce/views.py:542 kotti_mapreduce/templates/jobflow-view.pt:88
+#: kotti_mapreduce/views.py:546 kotti_mapreduce/templates/jobflow-view.pt:88
 msgid "Step arguments"
 msgstr ""
 
-#: kotti_mapreduce/views.py:543
+#: kotti_mapreduce/views.py:547
 msgid "Arguments to pass to the step."
 msgstr ""
 
@@ -471,6 +471,10 @@ msgid "Size (Bytes)"
 msgstr ""
 
 #: kotti_mapreduce/templates/movelink.pt:4
+msgid "Add another content."
+msgstr ""
+
+#: kotti_mapreduce/templates/movelink.pt:13
 msgid "Move to parent or children contents."
 msgstr ""
 
