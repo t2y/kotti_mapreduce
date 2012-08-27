@@ -33,7 +33,7 @@
       </tbody>
     </table>
 
-    <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt')"></movelink>
+    <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt', resources=resource_models)"></movelink>
 
   </article>
 </html>

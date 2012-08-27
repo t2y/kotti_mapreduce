@@ -216,6 +216,7 @@ def add_emrjob_resource(context, request):
 def view_emrjob_resource(context, request):
     return {
         'api': template_api(context, request),
+        'resource_models': [EMRJobResource, JobService, Bootstrap],
     }
 
 
@@ -253,6 +254,7 @@ def view_jobservice(context, request):
         'bootstraps': False,
         'is_runnable': False,
         'resource': get_resource(context),
+        'resource_models': [EMRJobResource, JobService, Bootstrap],
     }
 
 
@@ -366,6 +368,7 @@ def view_jobflow(context, request):
         'bootstraps': get_bootstraps(context),
         'is_runnable': is_runnable_jobflow(context),
         'resource': get_resource(context),
+        'resource_models': [JobFlow],
     }
 
 
@@ -412,6 +415,7 @@ def add_bootstrap(context, request):
 def view_bootstrap(context, request):
     return {
         'api': template_api(context, request),
+        'resource_models': [EMRJobResource, JobService, Bootstrap],
     }
 
 
@@ -561,6 +565,7 @@ def view_jobstep(context, request):
     return {
         'api': template_api(context, request),
         'attr_names': attr_names,
+        'resource_models': [JobStep],
     }
 
 def view_download_file(context, request):

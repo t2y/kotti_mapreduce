@@ -108,7 +108,7 @@
       <span id="btn_name_hide" i18n:translate="">Hide</span>
     </div>
 
-    <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt')"></movelink>
+    <movelink tal:replace="api.render_template('kotti_mapreduce:templates/movelink.pt', resources=resource_models)"></movelink>
 
   </article>
 </html>
