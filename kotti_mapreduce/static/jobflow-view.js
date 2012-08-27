@@ -17,6 +17,10 @@ $(function() {
         $('#bootstrap_info').toggleClass('toggle-display');
     });
 
+    $('#step_btn').click(function() {
+        $('#step_info').toggleClass('toggle-display');
+    });
+
     $('#runjobflow_btn').click(function() {
         $('#jobflow_list tbody *').remove();
         ajax_request($(this), {'type': 'runjobflow'}, append_jobflow_table);

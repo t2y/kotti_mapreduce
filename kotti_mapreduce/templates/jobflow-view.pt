@@ -21,6 +21,7 @@
 
     <button id="resource_btn" class="btn btn-info btn-small" i18n:translate="" tal:condition="resource is not None">Resource Info</button>
     <button id="bootstrap_btn" class="btn btn-info btn-small" i18n:translate="" tal:condition="bootstraps">Bootstrap Info</button>
+    <button id="step_btn" class="btn btn-info btn-small" i18n:translate="" tal:condition="is_runnable">Unexecuted Step Info</button>
 
     <table id="resource_info" class="toggle-display table table-striped table-condensed">
       <thead>
@@ -64,6 +65,45 @@
           <td>${row.title}</td>
           <td>${row.path_uri}</td>
           <td>${row.optional_args}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table id="step_info" class="toggle-display table table-striped table-condensed" tal:condition="is_runnable">
+      <thead tal:switch="context.jobtype">
+        <tr tal:case="'hive'">
+          <th i18n:translate="">Name</th>
+          <th i18n:translate="">Step args</th>
+        </tr>
+        <tr tal:case="'streaming'">
+          <th i18n:translate="">Name</th>
+          <th i18n:translate="">Mapper</th>
+          <th i18n:translate="">Reducer</th>
+          <th i18n:translate="">Input URI</th>
+          <th i18n:translate="">Output URI</th>
+        </tr>
+        <tr tal:case="'custom-jar'">
+          <th i18n:translate="">Name</th>
+          <th i18n:translate="">Jar URI</th>
+          <th i18n:translate="">Step args</th>
+        </tr>
+      </thead>
+      <tbody tal:repeat="row context.children" tal:switch="context.jobtype">
+        <tr tal:condition="not row.step_run" tal:case="'hive'">
+          <td>${row.title}</td>
+          <td>${row.step_args}</td>
+        </tr>
+        <tr tal:condition="not row.step_run" tal:case="'streaming'">
+          <td>${row.title}</td>
+          <td>${row.mapper}</td>
+          <td>${row.reducer}</td>
+          <td>${row.input_uri}</td>
+          <td>${row.output_uri}</td>
+        </tr>
+        <tr tal:condition="not row.step_run" tal:case="'custom-jar'">
+          <td>${row.title}</td>
+          <td>${row.jar_uri}</td>
+          <td>${row.step_args}</td>
         </tr>
       </tbody>
     </table>
