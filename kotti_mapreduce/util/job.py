@@ -223,9 +223,9 @@ def make_jobsteps(now, resource, context, target_steps):
         return None
 
 def get_bootstraps(jobflow):
-    model = Bootstrap
-    return [get_data(model, methodcaller("filter", model.title == title))
-                        for title in jobflow.bootstrap_titles]
+    bs = [get_data(Bootstrap, methodcaller("filter", Bootstrap.title == title))
+            for title in jobflow.bootstrap_titles]
+    return filter(lambda x: x is not None, bs)
 
 def get_bootstrap_actions(jobflow):
     return [BootstrapAction(bs.action_type, bs.path_uri,
