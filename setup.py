@@ -20,11 +20,13 @@ install_requires = [
 
 tests_require = [
     'WebTest',
+    'detox',
     'mock',
     'pytest',
     'pytest-cov',
     'pytest-pep8',
     'pytest-xdist',
+    'tox',
     'wsgi_intercept',
     'zope.testbrowser',
 ]
